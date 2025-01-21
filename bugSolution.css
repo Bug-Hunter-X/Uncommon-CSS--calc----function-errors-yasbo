@@ -1,0 +1,24 @@
+The following CSS code demonstrates solutions for the problems shown in `bug.css`:
+
+```css
+/* Correctly using calc with consistent units */
+.container {
+  width: calc(50% + 20px);
+  /* Ensure that the parent element has an explicit width */
+  max-width: 500px; /* Example max-width to prevent overflow */
+  box-sizing: border-box;
+}
+
+/* Handling potential overflow issues using min/max widths */
+.element {
+  width: calc(100% + 2em);
+  max-width: 100%; /* Ensures width does not exceed parent width */
+  box-sizing: border-box; 
+}
+```
+
+The solutions include:
+
+1. Using consistent units within the `calc()` function.
+2. Setting a `max-width` on elements using percentages to prevent overflow. 
+3. Setting an explicit width for parent elements when using `calc()` with percentages to enable accurate calculations.
