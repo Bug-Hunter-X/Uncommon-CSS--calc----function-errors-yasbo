@@ -1,0 +1,19 @@
+The following CSS code snippet demonstrates an uncommon error that can occur when using the `calc()` function with percentages:
+
+```css
+.container {
+  width: calc(50% + 20px);
+}
+```
+
+This code attempts to set the width of the `.container` element to 50% of its parent's width plus 20 pixels. However, this can lead to unexpected results if the parent element's width is not explicitly defined or if the calculation results in a width greater than the available space. This may cause overflow or layout issues depending on the context.
+
+Another common error involves using units inconsistently within the `calc()` function. For example, mixing percentages with pixels and ems can result in inaccurate calculations, especially in responsive layouts. 
+
+```css
+.element {
+  width: calc(100% + 2em);
+}
+```
+
+Here, if the `100%` exceeds the parent width, unexpected overflow may occur. In many browsers, adding `em` to `%` might also cause issues. Always have the same unit for the percentage or pixel values within `calc()` and ensure the calculation is possible within the context of the parent's element.
